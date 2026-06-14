@@ -1,5 +1,6 @@
 ﻿import { useRef, useCallback, useState } from 'react'
 import ServiceModal from './ServiceModal'
+import Card3D from './Card3D'
 
 /* â”€â”€ SVG platform logos â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const InstagramSVG = ({ size = 72 }) => (
@@ -187,7 +188,7 @@ const platforms = [
 ]
 
 /* â”€â”€ Single card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-function PlatformCard({ p, onClick, delay = 0 }) {
+function PlatformCard({ p, onClick, index = 0 }) {
   const ref = useRef(null)
 
   const onMove = useCallback((e) => {
@@ -255,10 +256,9 @@ function PlatformCard({ p, onClick, delay = 0 }) {
   }
 
   return (
+    <Card3D index={index} style={{ borderRadius: 22 }}>
     <div
       ref={ref}
-      className="scroll-reveal"
-      data-delay={delay}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       onClick={onClick}
@@ -270,6 +270,7 @@ function PlatformCard({ p, onClick, delay = 0 }) {
         cursor: 'pointer',
         boxShadow: '0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.07), inset 0 1px 0 rgba(255,255,255,0.1)',
         minHeight: 200,
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         transformStyle: 'preserve-3d',
@@ -357,6 +358,7 @@ function PlatformCard({ p, onClick, delay = 0 }) {
         </div>
       </div>
     </div>
+    </Card3D>
   )
 }
 
@@ -383,6 +385,7 @@ export default function PlatformCards() {
             <PlatformCard
               key={p.name}
               p={p}
+              index={i}
               onClick={() => setSelected(p)}
             />
           ))}

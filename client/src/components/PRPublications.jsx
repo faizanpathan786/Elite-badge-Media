@@ -1,3 +1,5 @@
+import Card3D from './Card3D'
+
 const tierPremium = [
   { name: 'Fashion Week Daily', price: '€700' },
   { name: 'Flaunt Magazine', price: '€1,000' },
@@ -43,18 +45,20 @@ function TierHeader({ title, badge, badgeClass }) {
   )
 }
 
-function PubCard({ pub, priceClass, tierClass }) {
+function PubCard({ pub, priceClass, tierClass, index = 0 }) {
   return (
-    <div className={`pub-card ${tierClass} rounded-xl p-4 flex flex-col gap-1`}>
-      <p className="text-white font-semibold text-sm leading-snug">{pub.name}</p>
-      <p className={`font-bold text-base ${priceClass}`}>{pub.price}</p>
-      <a
-        href="#contact"
-        className="text-purple-400 hover:text-purple-300 text-xs mt-1 transition-colors"
-      >
-        Inquire →
-      </a>
-    </div>
+    <Card3D index={index}>
+      <div className={`pub-card ${tierClass} rounded-xl p-4 flex flex-col gap-1 h-full`}>
+        <p className="text-white font-semibold text-sm leading-snug">{pub.name}</p>
+        <p className={`font-bold text-base ${priceClass}`}>{pub.price}</p>
+        <a
+          href="#contact"
+          className="text-purple-400 hover:text-purple-300 text-xs mt-1 transition-colors"
+        >
+          Inquire →
+        </a>
+      </div>
+    </Card3D>
   )
 }
 
@@ -87,10 +91,11 @@ export default function PRPublications() {
             badgeClass="bg-purple-500/20 text-purple-300 border border-purple-500/30"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {tierPremium.map((pub) => (
+            {tierPremium.map((pub, i) => (
               <PubCard
                 key={pub.name}
                 pub={pub}
+                index={i}
                 priceClass="gradient-text"
                 tierClass="tier-premium"
               />
@@ -106,10 +111,11 @@ export default function PRPublications() {
             badgeClass="bg-pink-500/20 text-pink-300 border border-pink-500/30"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {tierElite.map((pub) => (
+            {tierElite.map((pub, i) => (
               <PubCard
                 key={pub.name}
                 pub={pub}
+                index={i}
                 priceClass="gradient-text"
                 tierClass="tier-elite"
               />
@@ -125,10 +131,11 @@ export default function PRPublications() {
             badgeClass="bg-amber-500/20 text-amber-300 border border-amber-500/30"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {tierUltra.map((pub) => (
+            {tierUltra.map((pub, i) => (
               <PubCard
                 key={pub.name}
                 pub={pub}
+                index={i}
                 priceClass="gradient-text-gold"
                 tierClass="tier-ultra"
               />

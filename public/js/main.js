@@ -1,4 +1,4 @@
-console.log('%c🚀 Aadil Sayyed - Digital Growth Expert', 'color: #8B5CF6; font-size: 14px; font-weight: bold;')
+console.log('%c🚀 Adil Sayyed - Digital Growth Expert', 'color: #8B5CF6; font-size: 14px; font-weight: bold;')
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const waBtn = document.getElementById('whatsapp-btn')
   if (waBtn) {
     waBtn.addEventListener('click', () => {
-      const message = encodeURIComponent("Hi Aadil! I'm interested in your social media marketing services. Can you tell me more?")
-      window.open(`https://wa.me/+919999999999?text=${message}`, '_blank')
+      const message = encodeURIComponent("Hi Adil! I'm interested in your social media marketing services. Can you tell me more?")
+      window.open(`https://wa.me/+919763417024?text=${message}`, '_blank')
     })
   }
 

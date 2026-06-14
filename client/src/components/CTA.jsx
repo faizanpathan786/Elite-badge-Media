@@ -11,12 +11,12 @@ const gradientText = {
 
 export default function CTA() {
   const handleWhatsApp = () => {
-    const msg = encodeURIComponent("Hi Aadil! I'm interested in your services. Can you help me?")
-    window.open(`https://wa.me/+919999999999?text=${msg}`, '_blank')
+    const msg = encodeURIComponent("Hi Adil! I'm interested in your services. Can you help me?")
+    window.open(`https://wa.me/+919763417024?text=${msg}`, '_blank')
   }
 
   const handleEmail = () => {
-    window.location.href = 'mailto:contact@aadilsayyed.com?subject=Service Inquiry'
+    window.location.href = 'mailto:adilsayyad2025@gmail.com?cc=contact@aadilsayyed.com&subject=Service Inquiry'
   }
 
   return (
@@ -110,7 +110,7 @@ export default function CTA() {
               ))}
             </div>
 
-            {/* Aadil signature line */}
+            {/* Adil signature line */}
             <div style={{
               display: 'flex', alignItems: 'center', gap: 10,
               marginTop: 36, paddingTop: 28,
@@ -125,7 +125,7 @@ export default function CTA() {
               }}>AS</div>
               <div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: 'hsl(40,6%,95%)', fontFamily: 'General Sans, sans-serif' }}>
-                  Aadil Sayyed
+                  Adil Sayyed
                 </div>
                 <div style={{ fontSize: 11, color: 'rgba(242,241,239,0.4)', fontFamily: 'Geist Sans, sans-serif' }}>
                   Digital Growth Expert · Available worldwide
@@ -225,7 +225,7 @@ export default function CTA() {
                 <div style={{
                   fontSize: 13, color: 'rgba(242,241,239,0.38)', marginTop: 3,
                   fontFamily: 'Geist Sans, Inter, sans-serif',
-                }}>contact@aadilsayyed.com</div>
+                }}>adilsayyad2025@gmail.com / contact@aadilsayyed.com</div>
               </div>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>

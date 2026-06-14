@@ -82,12 +82,12 @@ const details = {
 
 /* ── Small helpers ───────────────────────────────────────────────── */
 const whatsapp = (platform) => {
-  const msg = encodeURIComponent(`Hi Aadil! I'm interested in your ${platform} services. Can you share more details?`)
-  window.open(`https://wa.me/+919999999999?text=${msg}`, '_blank')
+  const msg = encodeURIComponent(`Hi Adil! I'm interested in your ${platform} services. Can you share more details?`)
+  window.open(`https://wa.me/+919763417024?text=${msg}`, '_blank')
 }
 
 const email = () => {
-  window.location.href = 'mailto:contact@aadilsayyed.com?subject=Service Inquiry'
+  window.location.href = 'mailto:adilsayyad2025@gmail.com?cc=contact@aadilsayyed.com&subject=Service Inquiry'
 }
 
 function Badge({ children, gold }) {

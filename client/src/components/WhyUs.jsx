@@ -88,7 +88,7 @@ export default function WhyUs() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold mt-5"
               style={{ fontFamily: 'General Sans, system-ui, sans-serif', lineHeight: 1.05, letterSpacing: '-0.03em' }}
             >
-              Why Clients Choose <span className="gradient-text-hero">Aadil Sayyed</span>
+              Why Clients Choose <span className="gradient-text-hero">Adil Sayyed</span>
             </h2>
             <p
               className="mt-5 text-sm md:text-base"

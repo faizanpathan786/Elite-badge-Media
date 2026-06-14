@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Card3D from './Card3D'
 
 /* ── Package categories ─────────────────────────────────────────── */
 const categories = [
@@ -109,37 +110,45 @@ function PackageCard({ pkg, color, index }) {
   const metrics = Object.entries(pkg.metrics)
 
   const whatsapp = () => {
-    const msg = encodeURIComponent(`Hi Aadil! I'm interested in the ${pkg.name} package at ${pkg.price}. Can you help me?`)
-    window.open(`https://wa.me/+919999999999?text=${msg}`, '_blank')
+    const msg = encodeURIComponent(`Hi Adil! I'm interested in the ${pkg.name} package at ${pkg.price}. Can you help me?`)
+    window.open(`https://wa.me/+919763417024?text=${msg}`, '_blank')
   }
 
+  const baseShadow = pkg.popular
+    ? `inset 0 1px 0 rgba(255,255,255,0.14), 0 0 36px ${color}26, 0 14px 40px -18px ${color}55`
+    : 'inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 30px -18px rgba(8,4,26,0.9)'
+  const hoverShadow = pkg.popular
+    ? `inset 0 1px 0 rgba(255,255,255,0.18), 0 0 44px ${color}33, 0 26px 60px -20px ${color}66`
+    : `inset 0 1px 0 rgba(255,255,255,0.12), 0 24px 54px -20px ${color}40`
+
   return (
+    <Card3D index={index} style={{ borderRadius: 20 }}>
     <div
-      className="scroll-reveal"
-      data-delay={index * 80}
+      className="card-sheen"
       style={{
         background: pkg.popular
           ? `linear-gradient(135deg, ${color}18, ${color}09)`
-          : 'rgba(255,255,255,0.025)',
+          : 'linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015))',
         border: pkg.popular
           ? `1px solid ${color}50`
-          : '1px solid rgba(255,255,255,0.07)',
+          : '1px solid rgba(255,255,255,0.06)',
         borderRadius: 20,
         padding: 0,
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
         overflow: 'hidden',
-        boxShadow: pkg.popular ? `0 0 32px ${color}22` : 'none',
-        transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+        boxShadow: baseShadow,
+        transition: 'transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.35s ease',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.transform = 'translateY(-5px)'
-        e.currentTarget.style.boxShadow = `0 16px 48px ${color}22`
+        e.currentTarget.style.transform = 'translateY(-6px) scale(1.015)'
+        e.currentTarget.style.boxShadow = hoverShadow
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.transform = 'translateY(0)'
-        e.currentTarget.style.boxShadow = pkg.popular ? `0 0 32px ${color}22` : 'none'
+        e.currentTarget.style.transform = 'translateY(0) scale(1)'
+        e.currentTarget.style.boxShadow = baseShadow
       }}
     >
       {/* Top accent line */}
@@ -258,6 +267,7 @@ function PackageCard({ pkg, color, index }) {
         </button>
       </div>
     </div>
+    </Card3D>
   )
 }
 

@@ -20,8 +20,8 @@ const quickLinks = [
 
 export default function Footer() {
   const handleWhatsApp = () => {
-    const msg = encodeURIComponent("Hi Aadil! I'd like to schedule a free consultation.")
-    window.open(`https://wa.me/+919999999999?text=${msg}`, '_blank')
+    const msg = encodeURIComponent("Hi Adil! I'd like to schedule a free consultation.")
+    window.open(`https://wa.me/+919763417024?text=${msg}`, '_blank')
   }
 
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
                 className="text-white text-lg"
                 style={{ fontFamily: 'General Sans, system-ui, sans-serif', fontWeight: 700 }}
               >
-                Aadil Sayyed
+                Adil Sayyed
               </span>
             </div>
             <p className="text-gray-500 text-sm mt-3 leading-relaxed">
@@ -66,7 +66,7 @@ export default function Footer() {
               </a>
               {/* WhatsApp */}
               <a
-                href="https://wa.me/+919999999999"
+                href="https://wa.me/+919763417024"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -155,6 +155,7 @@ export default function Footer() {
               Get in Touch
             </h4>
             <div className="space-y-3 text-sm text-gray-400">
+              <p>📧 adilsayyad2025@gmail.com</p>
               <p>📧 contact@aadilsayyed.com</p>
               <p>💬 WhatsApp Available 24/7</p>
               <p>🌍 Serving Clients Worldwide</p>
@@ -172,8 +173,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 md:mt-12 md:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm" style={{ color: 'rgba(242,241,239,0.3)' }}>
-            © 2026 Aadil Sayyed. All rights reserved.
+            <p className="text-sm" style={{ color: 'rgba(242,241,239,0.3)' }}>
+            © 2026 Adil Sayyed. All rights reserved.
           </p>
           <p className="text-sm" style={{ color: 'rgba(242,241,239,0.3)' }}>
             Ethical Methods Only · Real Results · Worldwide Service

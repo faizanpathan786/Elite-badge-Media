@@ -167,7 +167,7 @@ export default function Hero() {
               }}>AS</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: 'hsl(40,6%,95%)', fontFamily: 'General Sans, sans-serif', lineHeight: 1.15 }}>
-                  Aadil Sayyed
+                  Adil Sayyed
                 </div>
                 <div style={{ fontSize: 9, color: '#8B5CF6', fontWeight: 600, letterSpacing: '0.08em', fontFamily: 'Geist Sans, sans-serif' }}>
                   DIGITAL GROWTH EXPERT

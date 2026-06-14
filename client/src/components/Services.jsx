@@ -1,4 +1,5 @@
 import React from 'react'
+import Card3D from './Card3D'
 
 const services = [
   {
@@ -102,20 +103,18 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
-            <div
-              key={s.title}
-              className="glass-card rounded-2xl p-5 md:p-8 scroll-reveal"
-              data-delay={i * 90}
-            >
-              <div className={`w-14 h-14 ${s.bg} rounded-xl flex items-center justify-center ${s.color} mb-5`}>
-                {s.icon}
+            <Card3D key={s.title} index={i}>
+              <div className="glass-card rounded-2xl p-5 md:p-8 h-full flex flex-col">
+                <div className={`w-14 h-14 ${s.bg} rounded-xl flex items-center justify-center ${s.color} mb-5`}>
+                  {s.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{s.title}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">{s.desc}</p>
+                <a href={s.link} className="inline-flex items-center gap-1 mt-5 text-sm font-semibold transition-colors" style={{ color: '#a855f7' }} onMouseEnter={e => e.currentTarget.style.color='#fcd34d'} onMouseLeave={e => e.currentTarget.style.color='#a855f7'}>
+                  {s.linkLabel}
+                </a>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{s.title}</h3>
-              <p className="text-gray-400 leading-relaxed text-sm">{s.desc}</p>
-              <a href={s.link} className="inline-flex items-center gap-1 mt-5 text-sm font-semibold transition-colors" style={{ color: '#a855f7' }} onMouseEnter={e => e.currentTarget.style.color='#fcd34d'} onMouseLeave={e => e.currentTarget.style.color='#a855f7'}>
-                {s.linkLabel}
-              </a>
-            </div>
+            </Card3D>
           ))}
         </div>
       </div>

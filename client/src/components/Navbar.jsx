@@ -33,7 +33,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center font-black text-white text-sm">AS</div>
           <div>
-            <div className="font-bold text-white text-base leading-tight">Aadil Sayyed</div>
+            <div className="font-bold text-white text-base leading-tight">Adil Sayyed</div>
             <div className="text-[10px] text-[#8B5CF6] font-medium tracking-wide">DIGITAL GROWTH EXPERT</div>
           </div>
         </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://wa.me/+919999999999"
+            href="https://wa.me/+919763417024"
             target="_blank"
             rel="noreferrer"
             className="btn-outline text-white text-sm font-medium px-4 py-2 rounded-lg"
@@ -88,7 +88,7 @@ export default function Navbar() {
             <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white font-medium">{l.label}</a>
           ))}
           <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-            <a href="https://wa.me/+919999999999" target="_blank" rel="noreferrer" className="btn-outline text-center text-white text-sm font-medium px-4 py-2.5 rounded-lg">💬 WhatsApp</a>
+            <a href="https://wa.me/+919763417024" target="_blank" rel="noreferrer" className="btn-outline text-center text-white text-sm font-medium px-4 py-2.5 rounded-lg">💬 WhatsApp</a>
             <a href="#services" onClick={() => setMobileOpen(false)} className="btn-gradient text-center text-white text-sm font-semibold px-4 py-2.5 rounded-lg">Get Started →</a>
           </div>
         </div>

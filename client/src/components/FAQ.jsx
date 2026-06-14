@@ -15,8 +15,8 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null)
 
   const handleWhatsApp = () => {
-    const msg = encodeURIComponent("Hi Aadil! I have a question about your services.")
-    window.open(`https://wa.me/+919999999999?text=${msg}`, '_blank')
+    const msg = encodeURIComponent("Hi Adil! I have a question about your services.")
+    window.open(`https://wa.me/+919763417024?text=${msg}`, '_blank')
   }
 
   return (
