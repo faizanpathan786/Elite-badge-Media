@@ -3,13 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Aadil Sayyed — Real Instagram growth, SEO, ORM & social media marketing for entrepreneurs, brands and public figures." />
-    <title>Aadil Sayyed | Instagram Growth & Digital Authority</title>
+    <meta name="description" content="Adil Sayyed — Real Instagram growth, SEO, ORM & social media marketing for entrepreneurs, brands and public figures." />
+    <title>Adil Sayyed | Instagram Growth & Digital Authority</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Theme Color (Android) -->
+    <meta name="theme-color" content="#8B5CF6" />
+
+    <!-- Apple PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Adil Sayyed" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://api.fontshare.com" />
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then((registration) => {
+          console.log('✓ Service Worker registered:', registration);
+        }).catch((error) => {
+          console.warn('✗ Service Worker registration failed:', error);
+        });
+      }
+    </script>
   </body>
 </html>
